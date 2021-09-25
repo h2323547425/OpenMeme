@@ -21,3 +21,4 @@ Run App
 Thank you for contributing.
 
 ## Issues
+Added Footer with Social Media Links
