@@ -1,9 +1,9 @@
+### Memextream is a open-source meme machine for everybody. 
+### A platform that lets you upload and share memes built by Meme lovers for Meme lovers while rewarding the creators for making us laugh.
+
 ### Tech Stack:
 >Backend : Node.js, Express.js
 >Frontend : CSS, React.js
-
-### Memextream is a open-source meme machine for everybody. 
-### A platform that lets you upload and share memes built by Meme lovers for Meme lovers while rewarding the creators for making us laugh.
 
 ## Backend functions:
 Run App 
