@@ -20,9 +20,7 @@ function Footer() {
             <h1 className="list-unstyled">
               {/* <li>342-420-6969</li> */}
               <div><br /></div>
-              <h4>Created by Shubham Singh. Feb 2021 </h4>
-              {/* <h4>123 Streeet South North</h4> */}
-              
+              <h4>Created by OpenSource. September 2021 </h4>   
             </h1>
           </div>
           {/* Column2 */}
