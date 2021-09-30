@@ -1,14 +1,14 @@
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import './SecondarySidebar.css';
+import "./SecondarySidebar.css";
 
 function SecondarySidebar() {
   return (
     <aside style={{ padding: "0px 16px" }}>
       {}
-      <Box className = 'panel-container'>
-      <h2 className = 'panel-header'>Top Creators</h2>
+      <Box className="panel-container">
+        <h2 className="panel-header">Top Creators</h2>
         <Box
           sx={{
             width: "100%",
