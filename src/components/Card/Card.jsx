@@ -45,7 +45,10 @@ export default function RecipeReviewCard() {
       title="Name PlaceHolder"/>
       <CardMedia component="img" image="" alt="404"/>
       <CardContent>
-        <Typography variant="body2" color="text.secondary"> Babu Rao Meme</Typography>
+        <Typography variant="body2" color="text.secondary">
+          {" "}
+          Babu Rao Meme
+        </Typography>
       </CardContent>
       
       <CardActions disableSpacing>
@@ -54,10 +57,20 @@ export default function RecipeReviewCard() {
           <IconButton aria-label="share"><ShareIcon /></IconButton>
         </Box>
         <Typography>Comments</Typography>
-        <ExpandMore expand={expanded} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more"><ExpandMoreIcon /></ExpandMore>
+        <ExpandMore
+          expand={expanded}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </ExpandMore>
       </CardActions>
 
-      <Collapse in={expanded} timeout="auto" unmountOnExit><CardContent><Comments /></CardContent>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Comments />
+        </CardContent>
       </Collapse>
     </Card>
   );

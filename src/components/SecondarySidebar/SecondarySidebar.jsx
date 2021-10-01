@@ -1,7 +1,7 @@
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import './SecondarySidebar.css';
+import "./SecondarySidebar.css";
 
 function SecondarySidebar() {
   return (
