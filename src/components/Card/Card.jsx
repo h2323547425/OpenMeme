@@ -10,12 +10,13 @@ import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Comments from "../Comments/Comments";
+
+import './Card.css'
 
 
 //Only top 3-4 comments to be displayed.
@@ -40,14 +41,14 @@ export default function RecipeReviewCard() {
 
   return (
     <Card className = 'card-container'>
-      <CardHeader avatar={<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">N</Avatar>} action={<IconButton aria-label="settings"><DeleteIcon /></IconButton>}
+      <CardHeader avatar={<Avatar className="avatar" aria-label="recipe">N</Avatar>} action={<IconButton aria-label="settings"><DeleteIcon /></IconButton>}
       title="Name PlaceHolder"/>
       <CardMedia component="img" image="" alt="404"/>
       <CardContent>
         <Typography variant="body2" color="text.secondary"> Babu Rao Meme</Typography>
       </CardContent>
       
-      <CardActions sx={{ display: "flex",alignItems: "center",justifyContent: "space-between",}}disableSpacing>
+      <CardActions disableSpacing>
         <Box className='box'>
           <IconButton aria-label="add to favorites"><FavoriteIcon /></IconButton>
           <IconButton aria-label="share"><ShareIcon /></IconButton>

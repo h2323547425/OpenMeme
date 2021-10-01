@@ -7,14 +7,15 @@ import {
   Typography,
   Divider,
 } from "@mui/material";
-import { red } from "@mui/material/colors";
+
+import './Comments.css'
 
 function Comments() {
   return (
-    <Card sx={{ boxShadow: 0, marginBottom: "16px" }}>
+    <Card className="comments-Card">
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar className="avatar" aria-label="recipe">
             R
           </Avatar>
         }

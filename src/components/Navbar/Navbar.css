@@ -9,3 +9,22 @@
   position: sticky;
 }
 
+.navbar-container {
+  flex-grow: 1;
+  display: block !important;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-container {
+    flex-grow: 1;
+    display: none !important;
+  }
+}
+
+.search {
+  margin-right: 16px;
+}
+
+.navbarBox {
+  flex-grow: 1;
+}

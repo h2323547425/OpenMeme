@@ -12,21 +12,17 @@ function Sidebar() {
   const [authorName, setAuthorName] = useState("");
   const [description, setDescription] = useState("");
   return (
-    <aside style={{ padding: "0px 16px" }}>
+    <aside className="aside-style"> 
+    {/*Most of the styles will be automatically applied through the other sidebar's styles */}
       <Typography
         variant="h4"
         color="initial"
-        sx={{
-          textTransform: "capitalize",
-          fontWeight: "bold",
-          marginBottom: "24px",
-          userSelect: "none",
-        }}
+        className="box-typography"
       >
         add new
       </Typography>
       <form action="">
-        <FormControl sx={{ width: "100%", marginBottom: "16px" }}>
+        <FormControl className="sideBarFormControl">
           <InputLabel htmlFor="author-name-label">Author Name</InputLabel>
           <OutlinedInput
             id="author-name-label"
@@ -40,7 +36,7 @@ function Sidebar() {
             required
           />
         </FormControl>
-        <FormControl sx={{ width: "100%", marginBottom: "16px" }}>
+        <FormControl className="sideBarFormControl">
           <InputLabel htmlFor="description-label">Description</InputLabel>
           <OutlinedInput
             id="description-label"
@@ -54,7 +50,7 @@ function Sidebar() {
             required
           />
         </FormControl>
-        <FormControl sx={{ width: "100%", marginBottom: "16px" }}>
+        <FormControl className="sideBarFormControl">
           <Input
             type="file"
             variant="filled"
