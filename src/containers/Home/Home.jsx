@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid } from "@mui/material";
+import Footer from "../../components/Footer/Footer"
 import {
   Navbar,
   Sidebar,
@@ -27,6 +28,9 @@ function Home() {
         <Grid item xs={0} sm={0} lg={3}>
           <SecondarySidebar />
         </Grid>
+        <Grid item xs={0} sm={12} lg={0}>
+      <Footer />
+      </Grid>
       </Grid>
     </div>
   );
