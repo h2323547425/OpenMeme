@@ -9,3 +9,31 @@ margin-bottom:32px;
     font-weight: 700;
     padding-bottom: 10px;
 }
+
+.box-typography {
+    text-transform: capitalize !important;
+    font-weight: bold !important;
+    margin-bottom: 24px !important;
+    user-select: none !important;
+}
+
+.sidebar-box {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.capitalized {
+    text-transform: capitalize !important;
+    /* Just for your info if you want capital letters use uppercase in place of capitalize cause capitalize just makes the first letters capital */
+}
+
+.aside-style {
+    padding: 0px 16px;
+}
+
+.sideBarFormControl{
+    width: 100% !important;
+    margin-bottom: 16px !important;
+}

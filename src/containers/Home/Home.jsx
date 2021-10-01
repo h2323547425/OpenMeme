@@ -7,6 +7,8 @@ import {
   MainContentWindow,
 } from "./imports";
 
+import './Home.css'
+
 function Home() {
   return (
     <div>
@@ -14,14 +16,7 @@ function Home() {
       <Grid
         container
         spacing={3}
-        sx={{
-          height: "100vh",
-          overflow: "auto",
-          backgroundColor: "#F4F4F4",
-          paddingTop: "90px",
-          boxSizing: "border-box",
-          marginTop: "0px",
-        }}
+        className="homeGrid"
       >
         <Grid item xs={0} sm={0} lg={3}>
           <Sidebar />

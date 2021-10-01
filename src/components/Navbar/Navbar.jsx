@@ -12,6 +12,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { logo } from "./imports.js";
 import { Container } from "@mui/material";
 import './Navbar.css'
+
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -63,13 +64,13 @@ export default function SearchAppBar() {
     setAnchorEl(null);
   };
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box className="navbarBox">
       <AppBar className='navbar'>
         <Toolbar>
-          <Container sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
+          <Container className="navbar-container">
             <img src={logo} alt="logo" width="180" />
           </Container>
-          <Search sx={{ marginRight: "16px" }}>
+          <Search className="search">
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
