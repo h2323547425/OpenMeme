@@ -10,6 +10,5 @@
 Run App 
 >npm install & npm start
 
-
 ### Check out our Contributing Guidelines [here](https://github.com/shubhamcodez/OpenMeme/blob/v2.0/CONTRIBUTING.md)
 Thank you for contributing.
