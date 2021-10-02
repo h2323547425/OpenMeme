@@ -1,0 +1,1 @@
+OpenMeme plans to capitalize on the impact and reachability of memes to generate branding power as a marketing solution. Providing the creators and brands a platform to spread memes and grow their brand through it.
