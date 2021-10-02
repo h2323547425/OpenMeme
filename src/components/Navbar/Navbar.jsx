@@ -1,7 +1,6 @@
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
@@ -16,9 +15,9 @@ import './Navbar.css'
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.black, 0.15),
   "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.black, 0.45),
   },
   marginLeft: 0,
   width: "100%",
@@ -64,9 +63,7 @@ export default function SearchAppBar() {
     setAnchorEl(null);
   };
   return (
-    <Box className="navbarBox">
-      <AppBar className='navbar'>
-        <Toolbar>
+        <Toolbar className='navbar'>
           <Container className="navbar-container">
             <img src={logo} alt="logo" width="180" />
           </Container>
@@ -110,7 +107,5 @@ export default function SearchAppBar() {
             </Menu>
           </div>
         </Toolbar>
-      </AppBar>
-    </Box>
   );
 }
