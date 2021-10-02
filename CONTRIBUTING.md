@@ -39,7 +39,7 @@ git checkout -b <branch name>
 4. Before committing changes, you should verify if the issue is fixed and run the script given below:
 
 ```bash
-npm run format
+npm start
 ```
 
 5. Commit your changes. Try to follow the [best practices][best_practices] while committing changes.
