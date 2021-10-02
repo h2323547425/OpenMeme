@@ -2,6 +2,8 @@
 
 So you have made your mind to contribute to this project? Here's everything you'll need to make your first contribution.
 
+For any communication, Join us on [Slack](https://join.slack.com/t/openmemeproject/shared_invite/zt-wtfvalq9-1JI~U~~mT~Dr4ECzZQnamQ)
+
 ### What can I help with?
 
 We welcome contributions of all sorts. Even the most minor changes are warmly welcomed. You may choose to work on an existing issue or propose your own.
