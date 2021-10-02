@@ -4,7 +4,7 @@ const app = express();
 
 const monk = require('monk');
 const ratelimit = require('express-rate-limit');
-const db = monk('mongodb+srv://meme_ad:root@cluster0.f9jwn.mongodb.net/XMeme-db?retryWrites=true&w=majority');
+const db = monk('/');
 const memes_data = db.get('XMeme-db'); 
 const port = process.env.PORT || 8081;
 app.use(express.json());
