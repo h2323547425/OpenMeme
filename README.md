@@ -3,13 +3,12 @@
 </h3>
 
 ### Tech Stack:
->Backend : Node.js, Express.js
+>Backend : Needs to be implemented
 >Frontend : CSS, React.js
 
 ### Backend functions:
 Run App 
 >npm install & npm start
-
 
 ### Check out our Contributing Guidelines [here](https://github.com/shubhamcodez/OpenMeme/blob/v2.0/CONTRIBUTING.md)
 Thank you for contributing.
