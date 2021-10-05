@@ -1,0 +1,25 @@
+{
+  "name": "server-side",
+  "version": "1.0.0",
+  "description": "Backend for OpenMeme platform",
+  "main": "index.server.js",
+  "scripts": {
+    "start": "nodemon index.server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhamcodez/OpenMeme"
+  },
+  "author": "Akshay Kanade",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
