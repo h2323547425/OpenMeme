@@ -15,7 +15,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Comments from "../Comments/Comments";
-
+import ThemeContext from "../../utils/Themes/ThemeContext";
 import './Card.css'
 
 
@@ -39,18 +39,21 @@ export default function RecipeReviewCard() {
     setExpanded(!expanded);
   };
 
+  const { isDark } = React.useContext(ThemeContext);
+  let themeMode = isDark ? "dark-card" : "light-card";
+
   return (
-    <Card className = 'card-container'>
+    <Card className={`card-container ${themeMode}`}>
       <CardHeader avatar={<Avatar className="avatar" aria-label="recipe">N</Avatar>} action={<IconButton aria-label="settings"><DeleteIcon /></IconButton>}
-      title="Name PlaceHolder"/>
-      <CardMedia component="img" image="" alt="404"/>
+        title="Name PlaceHolder" />
+      <CardMedia component="img" image="" alt="404" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {" "}
           Babu Rao Meme
         </Typography>
       </CardContent>
-      
+
       <CardActions disableSpacing>
         <Box className='box'>
           <IconButton aria-label="add to favorites"><FavoriteIcon /></IconButton>

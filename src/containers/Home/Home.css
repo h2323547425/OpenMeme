@@ -1,7 +1,12 @@
+.dark-homeGrid {
+    background-color: #312F2F;
+}
+.light-homeGrid {
+    background-color: #F4F4F4;
+}
 .homeGrid {
     height: 100vh;
     overflow: auto;
-    background-color: #F4F4F4;
     padding-top: 90px;
     box-sizing: border-box !important;
     margin-top: 0px !important;

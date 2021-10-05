@@ -1,3 +1,10 @@
+.dark-card{
+    background-color: red;
+    color: #ffffff;
+}
+.light-card{
+    background-color: FFFFFF;
+}
 .card-container{
     margin-bottom: 32px;
 }
@@ -5,6 +12,7 @@
 .box{
     width: 70%;
     border-radius: 10px;
+    border-color: #f44336;
 }
 
 .card-actions {

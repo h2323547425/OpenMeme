@@ -1,6 +1,14 @@
+.dark-footer{
+    color: #ffffff;
+    background-color: #69a10d
+}
+
+.light-footer{
+    color: #000000;
+    background-color: #aceb46 
+}
+
 .main-footer {
-    color: white;
-    background-color: transparent;
     padding-top: 3em;
     position: relative;
     bottom: 0;

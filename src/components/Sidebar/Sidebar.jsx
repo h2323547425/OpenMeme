@@ -7,17 +7,23 @@ import {
   Input,
   Button,
 } from "@mui/material";
+import './Sidebar.css';
+import ThemeContext from "../../utils/Themes/ThemeContext";
 
 function Sidebar() {
   const [authorName, setAuthorName] = useState("");
   const [description, setDescription] = useState("");
+
+  const { isDark } = React.useContext(ThemeContext);
+  let themeMode = isDark ? "dark-sidebar" : "light-sidebar";
+
   return (
-    <aside className="aside-style"> 
-    {/*Most of the styles will be automatically applied through the other sidebar's styles */}
+    <aside className={`aside-style ${themeMode}`}>
+      {/*Most of the styles will be automatically applied through the other sidebar's styles */}
       <Typography
         variant="h4"
-        color="initial"
-        className="box-typography"
+        color="inherit"
+        className={"box-typography"}
       >
         add new
       </Typography>

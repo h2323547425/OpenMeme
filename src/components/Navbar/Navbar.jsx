@@ -12,6 +12,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import { logo } from "./imports.js";
 import { Container } from "@mui/material";
 import './Navbar.css'
+import ThemeContext from "../../utils/Themes/ThemeContext";
+import ToggleSwitch from "../Toggle/ToggleSwitch.jsx";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -63,10 +65,14 @@ export default function SearchAppBar() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const { isDark } = React.useContext(ThemeContext);
+  let themeMode = isDark ? "dark-navbar" : "light-navbar";
+
   return (
     <Box className="navbarBox">
       <AppBar className='navbar'>
-        <Toolbar>
+        <Toolbar className={`navbar ${themeMode}`}>
           <Container className="navbar-container">
             <img src={logo} alt="logo" width="180" />
           </Container>
@@ -79,6 +85,7 @@ export default function SearchAppBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
+          <ToggleSwitch />
           <div>
             <IconButton
               size="large"
@@ -112,5 +119,6 @@ export default function SearchAppBar() {
         </Toolbar>
       </AppBar>
     </Box>
+
   );
 }
