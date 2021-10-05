@@ -1,44 +1,46 @@
-const express = require('express')
-const env = require('dotenv')
-const mongoose = require('mongoose')
-const cors = require('cors')
-const app = express()
+const express = require("express");
+const env = require("dotenv");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const app = express();
 
 // enviourment variables
-env.config()
+env.config();
 
 // middlerwares
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
 // routes
-const userAuthRoutes = require('./routes/user.auth')
-const memeRoutes = require('./routes/memes')
+const userAuthRoutes = require("./routes/user.auth");
+const memeRoutes = require("./routes/memes");
 
-app.use('/api', userAuthRoutes)
-app.use('/api', memeRoutes)
+app.use("/api", userAuthRoutes);
+app.use("/api", memeRoutes);
 
 // mongodb connection
 const connectDB = (dburl) => {
-    return mongoose.connect(dburl, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        // useCreateIndex: true,
-        // useFindAndModify: false,
-    }).then(() => {
-        console.log('Database Connected');
+  return mongoose
+    .connect(dburl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      // useCreateIndex: true,
+      // useFindAndModify: false,
     })
-}
+    .then(() => {
+      console.log("Database Connected");
+    });
+};
 
 const start = async () => {
-    try {
-        await connectDB(process.env.dburl);
-        app.listen(process.env.PORT, () => {
-            console.log(`Server is running on port ${process.env.PORT}...`);
-        })
-    } catch (error) {
-        console.log(error);
-    }
-}
+  try {
+    await connectDB(process.env.dburl);
+    app.listen(process.env.PORT, () => {
+      console.log(`Server is running on port ${process.env.PORT}...`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 start();
