@@ -13,8 +13,10 @@ app.use(express.json())
 
 // routes
 const userAuthRoutes = require('./routes/user.auth')
+const memeRoutes = require('./routes/memes')
 
 app.use('/api', userAuthRoutes)
+app.use('/api', memeRoutes)
 
 // mongodb connection
 const connectDB = (dburl) => {
