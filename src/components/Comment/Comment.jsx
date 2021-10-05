@@ -8,26 +8,23 @@ import {
   Divider,
 } from "@mui/material";
 
-import './Comments.css'
+import './Comment.css'
 
-function Comments() {
+export default function Comment({comment}) {
   return (
     <Card className="comments-Card">
       <CardHeader
         avatar={
-          <Avatar className="avatar" aria-label="recipe">
-            R
+          <Avatar className="avatar" aria-label="recipe" src={comment.author.profilePicture}>
           </Avatar>
         }
-        title="Shubham Singh"
-        subheader="September 18, 2021"
+        title={comment.author.userName}
+        subheader={comment.createdAt}
       />
       <CardContent>
-        <Typography>This is very funny</Typography>
+        <Typography>{comment.body}</Typography>
       </CardContent>
       <Divider />
     </Card>
   );
 }
-
-export default Comments;
