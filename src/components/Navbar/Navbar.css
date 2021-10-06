@@ -1,6 +1,13 @@
-.navbar {
+.dark-navbar {
+  background-color :  #69a10d;
+  color: #ffffff;
+}
+.light-navbar {
   background-color :  #aceb46;
   color: black;
+}
+.navbar {
+  
   display: flex;
   justify-content: center;
   font-size: 1.2rem;

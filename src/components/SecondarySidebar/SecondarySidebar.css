@@ -1,3 +1,9 @@
+.dark-secSidebar {
+    color: #aceb46;
+  }
+  .light-secSidebar {
+    color: #000000;
+  }
 .panel-container{
 width: 100%; 
 margin-bottom:32px;
