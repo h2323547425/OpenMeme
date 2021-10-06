@@ -15,7 +15,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import DeleteIcon from "@mui/icons-material/Delete";
-import Comments from "../Comments/Comments";
+import Comments from "../Comment/Comment";
 import ThemeContext from "../../utils/Themes/ThemeContext";
 import "./Card.css";
 
