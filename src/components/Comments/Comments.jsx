@@ -8,9 +8,9 @@ import {
     Divider
 } from "@mui/material";
 
-import "./Comment.css";
+import "./Comments.css";
 
-export default function Comments() {
+function Comments() {
     return (
         <Card className="comments-Card">
             <CardHeader
@@ -29,3 +29,5 @@ export default function Comments() {
         </Card>
     );
 }
+
+export default Comments;
