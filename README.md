@@ -3,7 +3,7 @@
 </h3>
 
 ### Tech Stack:
->Backend : Needs to be implemented
+>Backend : Node and Express
 >Frontend : CSS, React.js
 
 ### Backend functions:
