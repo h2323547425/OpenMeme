@@ -15,7 +15,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import DeleteIcon from "@mui/icons-material/Delete";
-import Comments from "../Comments/Comments";
+import Comment from "../Comment/Comment";
 import ThemeContext from "../../utils/Themes/ThemeContext";
 import "./Card.css";
 
@@ -32,7 +32,7 @@ const ExpandMore = styled((props) => {
     })
 }));
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard({ meme }) {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
@@ -46,22 +46,28 @@ export default function RecipeReviewCard() {
         <Card className={`card-container ${themeMode}`}>
             <CardHeader
                 avatar={
-                    <Avatar className="avatar" aria-label="recipe">
-                        N
-                    </Avatar>
+                    <Avatar
+                        className="avatar"
+                        aria-label="recipe"
+                        src={meme.author.profilePicture}
+                    />
                 }
                 action={
                     <IconButton aria-label="settings">
                         <DeleteIcon />
                     </IconButton>
                 }
-                title="Name PlaceHolder"
+                title={meme.author.userName}
             />
-            <CardMedia component="img" image="" alt="404" />
+            <CardMedia
+                component="img"
+                image={meme.mediaUrl}
+                height="200"
+                alt="404"
+            />
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                    {" "}
-                    Babu Rao Meme
+                    {meme.caption}
                 </Typography>
             </CardContent>
 
@@ -87,7 +93,9 @@ export default function RecipeReviewCard() {
 
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Comments />
+                    {meme.comments.map((com) => (
+                        <Comment comment={com} />
+                    ))}
                 </CardContent>
             </Collapse>
         </Card>
