@@ -6,7 +6,7 @@ import "./MainContentWindow.css";
 
 function MainContentWindow() {
     const { isLoading, data } = useFetch("http://localhost:5000/api/memes");
-    console.log(data);
+
     return (
         <Container className="Meme-container">
             {isLoading ? (
