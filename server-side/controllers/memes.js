@@ -1,8 +1,8 @@
 const Meme = require("../models/meme");
 
 // Get all Memes
-const getAllMemes = async (_req, res) => {
-    const memes = await Meme.find();
+const getAllMemes = async (req, res) => {
+    const memes = await Meme.find({}).sort({ createdAt: -1 });
     res.status(200).send(memes);
 };
 
