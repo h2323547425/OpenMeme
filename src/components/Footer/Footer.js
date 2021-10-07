@@ -17,18 +17,14 @@ function Footer() {
             <hr />
             <div className={`container ${themeMode}`}>
                 <div className="row">
-                    {/* Column1 */}
                     <div className="col">
-                        {/* <h4 >THICC MEMES INC</h4> */}
                         <h1 className="list-unstyled">
-                            {/* <li>342-420-6969</li> */}
                             <div>
                                 <br />
                             </div>
-                            <h4>Created by OpenSource. September 2021 </h4>
+                            <h4>Created with Opensource. September 2021© </h4>
                         </h1>
                     </div>
-                    {/* Column2 */}
                     <div className="col">
                         <div>
                             <br />
@@ -40,7 +36,7 @@ function Footer() {
                                     href="https://www.linkedin.com/in/shubhamcodez/"
                                 >
                                     {" "}
-                                    <FontAwesomeIcon
+                                    <FontAwesomeIcon 
                                         icon={faLinkedin}
                                         size="2x"
                                     />

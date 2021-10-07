@@ -70,7 +70,7 @@ export default function SearchAppBar() {
     return (
         <Toolbar className={`navbar ${themeMode}`}>
             <Container className="navbar-container">
-                <img src={logo} alt="logo" width="180" />
+                <img className="logo" src={logo} alt="logo" width="180" />
             </Container>
             <Search className="search">
                 <SearchIconWrapper>

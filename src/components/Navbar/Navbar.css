@@ -1,23 +1,30 @@
 .dark-navbar {
-  background-color :  #69a10d;
-  color: #ffffff;
+  background-color :  #faf604;
+  color: #000000;
 }
+
 .light-navbar {
-  background-color :  #aceb46;
-  color: black;
+  background-color :  #faf604;
+  color: rgb(100, 100, 95);
 }
+
 .navbar {
-  
+  height: 110px;
   display: flex;
   justify-content: center;
   font-size: 1.2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: sticky;
+  box-shadow: 4px 4px 1px 1px rgba(131, 131, 141, 0.1);
 }
 
 .navbar-container {
   flex-grow: 1;
   display: block !important;
+}
+
+.logo{
+  margin-left: 60px;
 }
 
 @media screen and (max-width: 576px) {
