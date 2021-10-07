@@ -8,7 +8,7 @@ Intial Deployment can be found here: [XMeme](https://memextream.netlify.app/)
 > GET method to display a single meme on endpoint /memes/id  <br>
 > Edit a meme using Patch Method on endpoint /memes/id  <br>
 
-## Proposed features of X-meme 1. 1. 0
+## Proposed features of X-meme 2. 0. 0
 > Create meme on the page itself  <br>
 > Edit button to edit a meme using patch request  <br>
 > Like button to display count of likes per meme  <br>
