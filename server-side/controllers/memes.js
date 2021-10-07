@@ -63,10 +63,31 @@ const deleteMemeById = async (req, res) => {
     }
 };
 
+// Like a Meme
+
+const likeMeme = async (req, res) => {
+    try {
+        if (req.body.userName) {
+            const meme = await Meme.findOne({ _id: req.body.id });
+            meme.likes.likeCount += 1;
+            meme.likes.likedBy.push(req.body.userName);
+            await meme.save();
+            res.status(200).send(meme);
+        } else {
+            res.status(400).send("UserName required!");
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(404);
+        res.send({ error: "Meme doesn't exist!" });
+    }
+};
+
 module.exports = {
     getAllMemes,
     getMemeById,
     createMeme,
     updateMemeById,
-    deleteMemeById
+    deleteMemeById,
+    likeMeme
 };
