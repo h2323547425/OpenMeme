@@ -7,7 +7,10 @@ const {
     createMeme,
     updateMemeById,
     deleteMemeById,
-    likeMeme
+    likeMeme,
+    postComment,
+    deleteCommentById,
+    updateCommentById
 } = require("../controllers/memes");
 
 router.get("/memes", getAllMemes);
@@ -16,5 +19,7 @@ router.post("/memes", createMeme);
 router.patch("/memes/:id", updateMemeById);
 router.delete("/memes/:id", deleteMemeById);
 router.put("/memes/like", likeMeme);
-
+router.post("/memes/comment", postComment);
+router.delete("/memes/comment/:id", deleteCommentById);
+router.patch("/memes/comment/:id", updateCommentById);
 module.exports = router;
