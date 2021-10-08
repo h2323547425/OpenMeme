@@ -108,9 +108,9 @@ const getTopLikedMemes = async (req, res) => {
     }
 };
 
-// Comment On Meme
+// Comment On a Meme
 
-// Post Meme
+// Post Comment on a Meme
 // method : POST
 // Body : {id: id of the meme, comment : comment body, author : { userName : userName of user, profilePicture(optional) : url}}
 
@@ -131,7 +131,7 @@ const postComment = async (req, res) => {
     }
 };
 
-// Delete Meme
+// Delete Comment on a Meme
 // method : DELETE
 // Body : {id: Id of the comment to be deleted}
 // meme's id to be passed in params
@@ -148,7 +148,7 @@ const deleteCommentById = async (req, res) => {
     }
 };
 
-// Update Meme
+// Update Comment On a Meme
 // method : PATCH
 // Body : {id: Id of the comment to be edited, editedComment : edited body, }
 // meme's id to be passed in params
