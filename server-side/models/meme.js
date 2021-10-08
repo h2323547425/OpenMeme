@@ -13,7 +13,10 @@ const memeSchema = new mongoose.Schema(
                 required: false
             }
         }, // [{ type: Schema.Types.ObjectId, ref: 'User' }] instead ?
-        likeCount: { type: Number, default: 0 },
+        likes: {
+            likeCount: { type: Number, default: 0 },
+            likedBy: [String]
+        },
         comments: [
             {
                 body: { type: String, required: true },
