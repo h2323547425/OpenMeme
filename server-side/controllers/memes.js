@@ -89,8 +89,67 @@ const likeMeme = async (req, res) => {
             res.status(400).send({ error: "UserName required!" });
         }
     } catch (err) {
-        res.status(404);
+        res.status(400);
         res.send({ error: "Meme doesn't exist!" });
+    }
+};
+
+// Comment On Meme
+
+// Post Meme
+// method : POST
+// Body : {id: id of the meme, comment : comment body, author : { userName : userName of user, profilePicture(optional) : url}}
+
+const postComment = async (req, res) => {
+    try {
+        const { comment, id, author } = req.body;
+        const meme = await Meme.findOne({ _id: id });
+        meme.comments.push({
+            comment,
+            author
+        });
+        await meme.save();
+        res.status(201).send({ action: "Comment posted successfully!", meme });
+    } catch (err) {
+        res.status(400).send(
+            "Meme/Comment doesn't exists OR Improper request format!"
+        );
+    }
+};
+
+// Delete Meme
+// method : DELETE
+// Body : {id: Id of the comment to be deleted}
+// meme's id to be passed in params
+const deleteCommentById = async (req, res) => {
+    try {
+        const meme = await Meme.findById({ _id: req.params.id });
+        meme.comments.pull(req.body.id);
+
+        await meme.save();
+        res.status(200).send({ action: "Comment deleted successfully!" });
+    } catch (err) {
+        res.status(400);
+        res.send({ error: "Comment doesn't exist!" });
+    }
+};
+
+// Update Meme
+// method : PATCH
+// Body : {id: Id of the comment to be edited, editedComment : edited body, }
+// meme's id to be passed in params
+const updateCommentById = async (req, res) => {
+    try {
+        const meme = await Meme.findById({ _id: req.params.id });
+        const item = meme.comments.id(req.body.id);
+        item.comment = req.body.editedComment;
+        await meme.save();
+        res.status(200).send({ action: "Comment updated successfully!", meme });
+    } catch (err) {
+        res.status(400);
+        res.send({
+            error: "Meme/ Comment doesn't exist OR Improper request format!"
+        });
     }
 };
 
@@ -100,5 +159,8 @@ module.exports = {
     createMeme,
     updateMemeById,
     deleteMemeById,
-    likeMeme
+    likeMeme,
+    postComment,
+    deleteCommentById,
+    updateCommentById
 };

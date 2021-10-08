@@ -19,7 +19,7 @@ const memeSchema = new mongoose.Schema(
         },
         comments: [
             {
-                body: { type: String, required: true },
+                comment: { type: String, required: true },
                 author: {
                     userName: { type: String, required: true },
                     profilePicture: {
