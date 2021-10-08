@@ -64,20 +64,31 @@ const deleteMemeById = async (req, res) => {
 };
 
 // Like a Meme
-
+// method : PUT
+// Body : {id: id of the meme, userName : userName of user who likes the post}
+// If a user has already liked a post then another request from the same user will
+// result in unlike!
 const likeMeme = async (req, res) => {
     try {
         if (req.body.userName) {
             const meme = await Meme.findOne({ _id: req.body.id });
-            meme.likes.likeCount += 1;
-            meme.likes.likedBy.push(req.body.userName);
-            await meme.save();
-            res.status(200).send(meme);
+            if (meme.likes.likedBy.includes(req.body.userName)) {
+                meme.likes.likeCount -= 1;
+                meme.likes.likedBy = meme.likes.likedBy.filter(
+                    (x) => x !== req.body.userName
+                );
+                await meme.save();
+                res.status(200).send({ action: "unliked", meme });
+            } else {
+                meme.likes.likeCount += 1;
+                meme.likes.likedBy.push(req.body.userName);
+                await meme.save();
+                res.status(200).send({ action: "liked", meme });
+            }
         } else {
-            res.status(400).send("UserName required!");
+            res.status(400).send({ error: "UserName required!" });
         }
     } catch (err) {
-        console.log(err);
         res.status(404);
         res.send({ error: "Meme doesn't exist!" });
     }

@@ -15,6 +15,6 @@ router.get("/memes/:id", getMemeById);
 router.post("/memes", createMeme);
 router.patch("/memes/:id", updateMemeById);
 router.delete("/memes/:id", deleteMemeById);
-router.post("/memes/like", likeMeme);
+router.put("/memes/like", likeMeme);
 
 module.exports = router;
