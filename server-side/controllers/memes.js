@@ -94,6 +94,20 @@ const likeMeme = async (req, res) => {
     }
 };
 
+// Get Top 3 Liked Posts
+// If two or more posts have same number of likes, the one posted earliest is returned
+const getTopLikedMemes = async (req, res) => {
+    try {
+        const memes = await Meme.find()
+            .sort({ "likes.likeCount": -1, createdAt: 1 })
+            .limit(3);
+        res.status(200).send(memes);
+    } catch (err) {
+        res.status(500);
+        res.send("Internal server Error");
+    }
+};
+
 // Comment On Meme
 
 // Post Meme
@@ -162,5 +176,6 @@ module.exports = {
     likeMeme,
     postComment,
     deleteCommentById,
-    updateCommentById
+    updateCommentById,
+    getTopLikedMemes
 };
