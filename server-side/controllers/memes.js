@@ -94,9 +94,23 @@ const likeMeme = async (req, res) => {
     }
 };
 
-// Comment On Meme
+// Get Top 3 Liked Posts
+// If two or more posts have same number of likes, the one posted earliest is returned
+const getTopLikedMemes = async (req, res) => {
+    try {
+        const memes = await Meme.find()
+            .sort({ "likes.likeCount": -1, createdAt: 1 })
+            .limit(3);
+        res.status(200).send(memes);
+    } catch (err) {
+        res.status(500);
+        res.send("Internal server Error");
+    }
+};
 
-// Post Meme
+// Comment On a Meme
+
+// Post Comment on a Meme
 // method : POST
 // Body : {id: id of the meme, comment : comment body, author : { userName : userName of user, profilePicture(optional) : url}}
 
@@ -117,7 +131,7 @@ const postComment = async (req, res) => {
     }
 };
 
-// Delete Meme
+// Delete Comment on a Meme
 // method : DELETE
 // Body : {id: Id of the comment to be deleted}
 // meme's id to be passed in params
@@ -134,7 +148,7 @@ const deleteCommentById = async (req, res) => {
     }
 };
 
-// Update Meme
+// Update Comment On a Meme
 // method : PATCH
 // Body : {id: Id of the comment to be edited, editedComment : edited body, }
 // meme's id to be passed in params
@@ -162,5 +176,6 @@ module.exports = {
     likeMeme,
     postComment,
     deleteCommentById,
-    updateCommentById
+    updateCommentById,
+    getTopLikedMemes
 };
