@@ -1,6 +1,12 @@
 .dark-sidebar {
-  color: #aceb46;
+  color: #f5f5f4;
+  font-family: 'Montserrat', sans-serif;
 }
 .light-sidebar {
-  color: #000000;
+  color: #493f3f;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.heading{
+  padding-bottom: 10px;
 }

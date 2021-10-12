@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-console */
 const express = require("express");
 const env = require("dotenv");
@@ -9,6 +10,7 @@ const app = express();
 // enviourment variables
 env.config();
 
+const Port = process.env.PORT || 5000;
 // middlerwares
 app.use(cors());
 app.use(express.json());
@@ -36,8 +38,8 @@ const connectDB = (dburl) =>
 const start = async () => {
     try {
         await connectDB(process.env.dburl);
-        app.listen(process.env.PORT, () => {
-            console.log(`Server is running on port ${process.env.PORT}...`);
+        app.listen(Port, () => {
+            console.log(`Server is running on port ${Port}...`);
         });
     } catch (error) {
         console.log(error);

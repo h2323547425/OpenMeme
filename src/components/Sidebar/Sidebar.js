@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-    Typography,
     FormControl,
     OutlinedInput,
     InputLabel,
@@ -18,12 +17,12 @@ function Sidebar() {
     const themeMode = isDark ? "dark-sidebar" : "light-sidebar";
 
     return (
-        <aside className={`aside-style ${themeMode}`}>
+        <div className={`aside-style ${themeMode}`}>
             {/* Most of the styles will be automatically applied through the other sidebar's styles */}
-            <Typography variant="h4" color="inherit" className="box-typography">
-                add new
-            </Typography>
             <form action="">
+                <h2 variant="h4" color="inherit" className="heading">
+                    Upload your own
+                </h2>
                 <FormControl className="sideBarFormControl">
                     <InputLabel htmlFor="author-name-label">
                         Author Name
@@ -33,7 +32,6 @@ function Sidebar() {
                         value={authorName}
                         onChange={(event) => setAuthorName(event.target.value)}
                         label="Author Name"
-                        sx={{ outline: "none" }}
                         fullWidth
                         color="primary"
                         autoComplete={false}
@@ -49,7 +47,6 @@ function Sidebar() {
                         value={description}
                         onChange={(event) => setDescription(event.target.value)}
                         label="Description"
-                        sx={{ outline: "none" }}
                         multiline
                         fullWidth
                         autoComplete={false}
@@ -67,13 +64,12 @@ function Sidebar() {
                 <Button variant="contained" color="success" fullWidth>
                     <Input
                         type="submit"
-                        sx={{ color: "white" }}
                         disableUnderline
                         fullWidth
                     />
                 </Button>
             </form>
-        </aside>
+        </div>
     );
 }
 

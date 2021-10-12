@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import "./SecondarySidebar.css";
@@ -10,20 +10,11 @@ function SecondarySidebar() {
     return (
         <aside className={`aside-style ${themeMode}`}>
             <Box className="panel-container">
-                <h2 className="panel-header">Top Creators</h2>
+                <h1 className="panel-header">Top Creators</h1>
                 <Box className="sidebar-box" />
             </Box>
             <Box>
-                <Typography
-                    variant="h4"
-                    color="inherit"
-                    className={`box-typography ${themeMode}`}
-                >
-                    Contact
-                </Typography>
-                <Button className="capitalized" variant="contained" fullWidth>
-                    click to contact
-                </Button>
+                <Button className="capitalized" variant="contained" fullWidth>contact</Button>
             </Box>
         </aside>
     );

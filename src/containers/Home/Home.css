@@ -1,5 +1,5 @@
 .dark-homeGrid {
-    background-color: #312f2f;
+    background-image: linear-gradient(180deg, rgb(49, 47, 47), rgb(60,60,60));
 }
 .light-homeGrid {
     background-color: #f4f4f4;
