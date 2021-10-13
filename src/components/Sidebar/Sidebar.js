@@ -39,8 +39,8 @@ function Sidebar() {
                     />
                 </FormControl>
                 <FormControl className="sideBarFormControl">
-                    <InputLabel htmlFor="description-label">
-                        Description
+                    <InputLabel htmlFor="description-label" autoComplete={false}>
+                        Comment
                     </InputLabel>
                     <OutlinedInput
                         id="description-label"
@@ -61,12 +61,8 @@ function Sidebar() {
                         disableUnderline
                     />
                 </FormControl>
-                <Button variant="contained" color="success" fullWidth>
-                    <Input
-                        type="submit"
-                        disableUnderline
-                        fullWidth
-                    />
+                <Button className="submit-button" fullWidth>
+                    <Input type="submit" disableUnderline fullWidth/>
                 </Button>
             </form>
         </div>

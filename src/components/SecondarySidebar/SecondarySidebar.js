@@ -8,15 +8,13 @@ function SecondarySidebar() {
     const { isDark } = React.useContext(ThemeContext);
     const themeMode = isDark ? "dark-secSidebar" : "light-secSidebar";
     return (
-        <aside className={`aside-style ${themeMode}`}>
+        <div className={`aside-style ${themeMode}`}>
             <Box className="panel-container">
-                <h1 className="panel-header">Top Creators</h1>
+                <h2 className="panel-header">Top Creators</h2>
                 <Box className="sidebar-box" />
             </Box>
-            <Box>
-                <Button className="capitalized" variant="contained" fullWidth>contact</Button>
-            </Box>
-        </aside>
+            <Button className="contact-button" fullWidth>Contact</Button>
+        </div>
     );
 }
 

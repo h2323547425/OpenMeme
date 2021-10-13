@@ -3,10 +3,15 @@
   font-family: 'Montserrat', sans-serif;
 }
 .light-sidebar {
-  color: #493f3f;
   font-family: 'Montserrat', sans-serif;
 }
 
 .heading{
+  color: #493f3f;
   padding-bottom: 10px;
+}
+
+.submit-button{
+color: aliceblue !important;
+background-color: rgb(0, 132, 255) !important;
 }

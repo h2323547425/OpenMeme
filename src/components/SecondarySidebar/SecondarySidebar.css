@@ -17,7 +17,6 @@ margin-bottom:32px;
 }
 
 .box-typography {
-    text-transform: capitalize !important;
     font-weight: bold !important;
     margin-bottom: 24px !important;
     user-select: none !important;
@@ -30,8 +29,9 @@ margin-bottom:32px;
     border-radius: 8px;
 }
 
-.capitalized {
-    text-transform: capitalize !important;
+.contact-button {
+    color: aliceblue !important;
+    background-color: rgb(0, 132, 255) !important;
     /* Just for your info if you want capital letters use uppercase in place of capitalize cause capitalize just makes the first letters capital */
 }
 
