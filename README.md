@@ -3,8 +3,8 @@
 </h3>
 
 ### Tech Stack:
- >Backend : `Node and Express`<br>
- >Frontend : `CSS, React.js`
+ >Backend : `Node` and `Express`<br>
+ >Frontend : `CSS`, `React.js`
 
 
 ### Frontend functions:
