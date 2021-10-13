@@ -20,7 +20,7 @@ function Sidebar() {
         <div className={`aside-style ${themeMode}`}>
             {/* Most of the styles will be automatically applied through the other sidebar's styles */}
             <form action="">
-                <h2 variant="h4" color="inherit" className="heading">
+                <h2>
                     Upload your own
                 </h2>
                 <FormControl className="sideBarFormControl">
