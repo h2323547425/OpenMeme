@@ -3,9 +3,9 @@
 </h3>
 
 ### Tech Stack:
- >Backend : `Node` and `Express`<br>
- >Frontend : `CSS`, `React.js`
-
+ >Backend : `Node.js` and `Express`<br>
+ >Frontend : `CSS`, `React.js` <br>
+ >Database : `MongoDB` handled using `Mongoose`
 
 ### Frontend functions:
  `npm install & npm start`
