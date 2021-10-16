@@ -11,7 +11,7 @@
  `npm install & npm start`
  
 ### Backend functions:
- Open server-side folder 
+ Open server-side folder <br>
   `npm install & npm start`
  
 ### Check out our Contributing Guidelines [here](https://github.com/shubhamcodez/OpenMeme/blob/v2.0/CONTRIBUTING.md)
