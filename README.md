@@ -2,6 +2,7 @@
  A platform that lets you upload and share memes built by Meme lovers for Meme lovers.
 </h3>
 
+Contribute to us to earn a token of memecoin crypto, Dogecoin.
 ### Tech Stack:
  >Backend : `Node.js` and `Express`<br>
  >Frontend : `CSS`, `React.js` <br>
