@@ -1,5 +1,4 @@
-<h3> Memextream is a open-source meme machine for everybody. 
- A platform that lets you upload and share memes built by Meme lovers for Meme lovers.
+<h3> Memextream is a opensource meme marketing startup.
 </h3>
 
 Contribute to us to earn a token of memecoin crypto, Dogecoin.
