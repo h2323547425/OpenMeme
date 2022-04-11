@@ -9,7 +9,6 @@ function MainContentWindow() {
 
     return (
         <Container className="Meme-container">
-            Hi
             {isLoading ? (
                 <div>Loading...</div>
             ) : (
