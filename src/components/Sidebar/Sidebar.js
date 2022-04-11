@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm, Controller } from 'react-hook-form';
+import FormData from 'form-data';
+import axios from 'axios';
 import {
     FormControl,
     OutlinedInput,
@@ -10,16 +13,32 @@ import "./Sidebar.css";
 import ThemeContext from "../../utils/Themes/ThemeContext";
 
 function Sidebar() {
-    const [authorName, setAuthorName] = useState("");
-    const [description, setDescription] = useState("");
-
     const { isDark } = React.useContext(ThemeContext);
     const themeMode = isDark ? "dark-sidebar" : "light-sidebar";
+    
+    const { handleSubmit, control } = useForm();
+
+    async function submitHandler(values) {
+        const formData = new FormData();
+        console.log(values)
+        formData.append("name", values.name);
+        formData.append("comment", values.comment);
+        formData.append("meme", values.meme);
+        const config = {     
+            headers: { 'content-type': 'multipart/form-data' }
+        }
+        const url = 'http://localhost:5000/api/memes';
+        axios.post(url, formData, config).then(() => {
+            alert("Meme is successfully submitted");
+        }).catch((err) => {
+            console.error(err);
+        })
+    }
 
     return (
         <div className={`aside-style ${themeMode}`}>
             {/* Most of the styles will be automatically applied through the other sidebar's styles */}
-            <form action="">
+            <form onSubmit={handleSubmit(submitHandler)}>
                 <h2>
                     Upload your own
                 </h2>
@@ -27,38 +46,59 @@ function Sidebar() {
                     <InputLabel htmlFor="author-name-label">
                         Author Name
                     </InputLabel>
-                    <OutlinedInput
-                        id="author-name-label"
-                        value={authorName}
-                        onChange={(event) => setAuthorName(event.target.value)}
-                        label="Author Name"
-                        fullWidth
-                        color="primary"
-                        autoComplete={false}
-                        required
+                    <Controller
+                        name="name"
+                        control={control}
+                        render={({ field: { onChange, value } }) => (
+                            <OutlinedInput
+                                id="author-name-label"
+                                value={value}
+                                onChange={onChange}
+                                label="Author Name"
+                                fullWidth
+                                color="primary"
+                                autoComplete={false}
+                                required
+                            />
+                        )}
                     />
                 </FormControl>
                 <FormControl className="sideBarFormControl">
-                    <InputLabel htmlFor="description-label" autoComplete={false}>
+                    <InputLabel htmlFor="description-label">
                         Comment
                     </InputLabel>
-                    <OutlinedInput
-                        id="description-label"
-                        value={description}
-                        onChange={(event) => setDescription(event.target.value)}
-                        label="Description"
-                        multiline
-                        fullWidth
-                        autoComplete={false}
-                        required
+                    <Controller
+                        name="comment"
+                        control={control}
+                        render={({ field: { onChange, value } }) => (
+                            <OutlinedInput
+                                id="description-label"
+                                value={value}
+                                onChange={onChange}
+                                label="Description"
+                                multiline
+                                fullWidth
+                                autoComplete={false}
+                                required
+                            />
+                        )}
                     />
                 </FormControl>
                 <FormControl className="sideBarFormControl">
-                    <Input
-                        type="file"
-                        variant="filled"
-                        color="warning"
-                        disableUnderline
+                <Controller
+                        name="meme"
+                        control={control}
+                        render={({ field: { onChange, value } }) => (
+                            <Input
+                                type="file"
+                                value={value}
+                                onChange={onChange}
+                                variant="filled"
+                                color="warning"
+                                disableUnderline
+                                required
+                            />
+                        )}
                     />
                 </FormControl>
                 <Button className="submit-button" fullWidth>

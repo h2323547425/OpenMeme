@@ -27,7 +27,7 @@ const createMeme = async (req, res) => {
             profilePicture: req.body.author.profilePicture
         }
     });
-    await meme.save();
+    //await meme.save();
     res.send(meme);
 };
 

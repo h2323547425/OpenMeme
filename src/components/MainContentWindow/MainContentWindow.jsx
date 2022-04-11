@@ -5,10 +5,11 @@ import Card from "../Card/Card";
 import "./MainContentWindow.css";
 
 function MainContentWindow() {
-    const { isLoading, data } = useFetch("http://localhost:5000/api/memes");
+     const { isLoading, data } = useFetch("http://localhost:5000/api/memes");
 
     return (
         <Container className="Meme-container">
+            Hi
             {isLoading ? (
                 <div>Loading...</div>
             ) : (
@@ -17,7 +18,7 @@ function MainContentWindow() {
                         <Card meme={me} />
                     ))}
                 </>
-            )}
+                    )}
         </Container>
     );
 }
