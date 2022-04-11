@@ -1,5 +1,5 @@
 ---
-name: Beginner Bug Fixes
+name: Beginner Bug Fixes #47
 about: Add submit handler to form in Sidebar
 title: ''
 labels: ''
